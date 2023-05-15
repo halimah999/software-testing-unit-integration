@@ -37,8 +37,8 @@ after that we made the integration testing to check if the registration customer
   Here we made a bunch of testing based in some logics such as should be thrown error if currency not supported or card not founded
 - ```StripeServiceTest```
   in this service we check if could be debited of the  card or thrown exception during some cases
-  
 
+`note`:  In service tests we applied mock and mockito to removing external dependencies  from a unit test
 ## 2. Integration testing
 
 to check if the registration customer and payment  work correctly togther:
@@ -47,7 +47,7 @@ we applied some step:
 - then we apply MockMvc to test service side
 - after that we applied our test to see if registration and payment processes are response with 200 and the payment process save in database
 
-`note`:  In service tests we applied mock and mockito to removing external dependencies  from a unit test
+
 
 
 
