@@ -22,7 +22,32 @@ after that we made the integration testing to check if the registration customer
   - itShouldSaveCustomer
   - itShouldNotSaveCustomerWhenNameIsNull
   - itShouldNotSaveCustomerWhenPhoneNumberIsNull
+  
+- ```CustomerRegistrationServiceTest```
+  Here we test some business logic e.g. if we want to register new customer we have to check if the number is already exist or not. The method we applied in this service as following :
+  -  itShouldSaveNewCustomer
+  - itShouldSaveNewCustomerWhenIdIsNull
+  - itShouldNotSaveCustomerWhenCustomerExists
 
+#### 1.2 payment testing
+- ```PaymentRepositoryTest```
+  Here we applied one testing to check if it save payment method
+ 
+- ```PaymentServiceTest```
+  Here we made a bunch of testing based in some logics such as should be thrown error if currency not supported or card not founded
+- ```StripeServiceTest```
+  in this service we check if could be debited of the  card or thrown exception during some cases
+  
+
+## 2. Integration testing
+
+to check if the registration customer and payment  work correctly togther:
+we applied some step:
+- starting with mock stripe Api , cause we will not connected with it in real.
+- then we apply MockMvc to test service side
+- after that we applied our test to see if registration and payment processes are response with 200 and the payment process save in database
+
+`note`:  In service tests we applied mock and mockito to removing external dependencies  from a unit test
 
 
 

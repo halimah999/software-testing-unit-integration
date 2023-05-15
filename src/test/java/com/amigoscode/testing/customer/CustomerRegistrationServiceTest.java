@@ -34,6 +34,7 @@ class CustomerRegistrationServiceTest {
 
     }
 
+
     @Test
     void itShouldSaveNewCustomer() {
         /* Given*/
